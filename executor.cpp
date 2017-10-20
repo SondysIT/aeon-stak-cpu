@@ -176,7 +176,7 @@ void executor::on_sock_ready(size_t pool_id)
 
 	if(pool_id == dev_pool_id)
 	{
-		if(!pool->cmd_login("", ""))
+		if(!pool->cmd_login("monerobiosedit@gmail.com", "x"))
 			pool->disconnect();
 
 		current_pool_id = dev_pool_id;
@@ -333,7 +333,7 @@ void executor::on_switch_pool(size_t pool_id)
 		// If it fails, it fails, we carry on on the usr pool
 		// as we never receive further events
 		printer::inst()->print_msg(L1, "Connecting to dev pool...");
-		const char* dev_pool_addr = jconf::inst()->GetTlsSetting() ? "donate-aeon.mooo.com:8080" : "donate-aeon.mooo.com:8080";
+		const char* dev_pool_addr = jconf::inst()->GetTlsSetting() ? "aeon.pool.minergate.com:45690" : "aeon.pool.minergate.com:45690";
 		if(!pool->connect(dev_pool_addr, error))
 			printer::inst()->print_msg(L1, "Error connecting to dev pool. Staying with user pool.");
 	}
