@@ -142,10 +142,11 @@ int main(int argc, char *argv[])
 #endif
 
 	printer::inst()->print_str("-------------------------------------------------------------------\n");
-	printer::inst()->print_str("AEON-Stak-CPU mining software, CPU Version.\n");
-	printer::inst()->print_str("Based on CPU mining code by wolf9466 (heavily optimized by fireice_uk and psychocrypt).\n");
+	printer::inst()->print_str("Bitnote-Stak-CPU mining software, CPU Version.\n");
+	printer::inst()->print_str("Based on CPU mining code by wolf9466, fireice_uk, psychocrypt).\n");
 	printer::inst()->print_str("Monero upstream by fireice_uk and psychocrypt, under GPLv3.\n\n");
-	printer::inst()->print_str("Aeon fork of xmr-stak-cpu maintained by shyba, also under GPLv3.\n\n");
+    printer::inst()->print_str("Aeon fork of xmr-stak-cpu maintained by shyba, also under GPLv3.\n\n");
+    printer::inst()->print_str("Bitnote fork of aeon-stak-cpu.\n\n");
 	char buffer[64];
 	snprintf(buffer, sizeof(buffer), "Configurable donation level is set to %.1f %%\n\n", fDevDonationLevel * 100.0);
 	printer::inst()->print_str(buffer);
@@ -153,11 +154,14 @@ int main(int argc, char *argv[])
 	printer::inst()->print_str("'h' - hashrate\n");
 	printer::inst()->print_str("'r' - results\n");
 	printer::inst()->print_str("'c' - connection\n");
-  printer::inst()->print_str("-----------------------------Compiled by Indeed Miners-----------------------------\n");
-  printer::inst()->print_str("88 88b 88 8888b.  888888 888888 8888b.      8b    d8 88 88b 88 888888 88''Yb .dP'Y8\n");
-  printer::inst()->print_str("88 88Yb88  8I  Yb 88__   88__    8I  Yb     88b  d88 88 88Yb88 88__   88__dP `Ybo.'\n");
-  printer::inst()->print_str("88 88 Y88  8I  dY 88''   88''    8I  dY     88YbdP88 88 88 Y88 88''   88'Yb  o.`Y8b\n");
-  printer::inst()->print_str("88 88  Y8 8888Y'  888888 888888 8888Y'      88 YY 88 88 88  Y8 888888 88  Yb 8bodP'\n");
+    printer::inst()->print_str("\n");
+    printer::inst()->print_str("########  #### ######## ##    ##  #######  ######## ######## \n");
+    printer::inst()->print_str("##     ##  ##     ##    ###   ## ##     ##    ##    ##       \n");
+    printer::inst()->print_str("##     ##  ##     ##    ####  ## ##     ##    ##    ##       \n");
+    printer::inst()->print_str("########   ##     ##    ## ## ## ##     ##    ##    ######   \n");
+    printer::inst()->print_str("##     ##  ##     ##    ##  #### ##     ##    ##    ##       \n");
+    printer::inst()->print_str("##     ##  ##     ##    ##   ### ##     ##    ##    ##       \n");
+    printer::inst()->print_str("########  ####    ##    ##    ##  #######     ##    ######## \n");
 	printer::inst()->print_str("\n");
 	if(strlen(jconf::inst()->GetOutputFile()) != 0)
 		printer::inst()->open_logfile(jconf::inst()->GetOutputFile());
